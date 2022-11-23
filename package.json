@@ -1,0 +1,13 @@
+{
+  "name": "cv",
+  "packageManager": "yarn@3.3.0",
+  "dependencies": {
+    "prettier": "^2.8.0",
+    "sort-package-json": "^2.1.0"
+  },
+  "scripts": {
+    "format": "yarn format-manifests && prettier --write .",
+    "format-manifests": "sort-package-json \"package.json\" \"packages/*/package.json\"",
+    "lint-format": "prettier --list-different . && yarn format-manifests --check"
+  }
+}
